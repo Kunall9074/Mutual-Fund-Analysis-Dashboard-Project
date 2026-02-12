@@ -1,0 +1,31 @@
+Rank,Scheme Name,AMC Name,Fund Type,Category,Sub Category,Risk Level,Fund Rating,Return 1Y (%),Return 3Y (%),Return 5Y (%),Expense Ratio (%),NAV (₹),AUM (Cr),Fund Age (Years),Min SIP (₹),Min Lumpsum (₹),Fund Manager,Investment Strategy,Score
+1,IDFC Discovery Small Cap Fund - Direct Plan - IDCW,IDFC Mutual Fund,Equity,Small Cap,Discovery,High,5,44.82,43.68,47.31,0.74,458.81,1557.4,21.7,2000,5000,Niket Shah,Active,100.0
+2,L&T Micro Cap Small Cap Fund - Direct Plan - IDCW,L&T Mutual Fund,Equity,Small Cap,Micro Cap,High,4,41.83,44.23,43.75,0.73,45.98,1920.42,22.9,1000,10000,Anish Tawakley,Active,97.56
+3,Bank of India Emerging Small Cap Plan - Direct Plan - IDCW,Bank of India Mutual Fund,Equity,Small Cap,Emerging,Very High,5,47.1,42.86,45.17,0.79,486.21,260.25,16.1,100,5000,Kalpen Parekh,GARP,93.54
+4,HSBC Emerging Small Cap Fund - Direct Plan - Growth,HSBC Mutual Fund,Equity,Small Cap,Emerging,High,4,45.74,43.11,47.53,0.84,40.23,843.0,14.9,1500,10000,Ankit Agarwal,GARP,93.33
+5,Union Opportunities Mid Cap Fund - Regular Plan - Growth,Union Mutual Fund,Equity,Mid Cap,Opportunities,Moderately High,5,32.12,34.09,35.12,0.53,549.03,74755.77,28.0,100,500,Taher Badshah,Income,92.96
+6,Bandhan Micro Cap Small Cap Scheme - Regular Plan - IDCW,Bandhan Mutual Fund,Equity,Small Cap,Micro Cap,High,4,47.62,42.75,39.56,1.19,289.65,82.96,23.8,500,25000,Vinay Sharma,Passive,92.95
+7,Aditya Birla Sun Life Energy Sectoral Fund - Direct Plan - IDCW,Aditya Birla Sun Life Mutual Fund,Equity,Sectoral,Energy,High,5,45.57,38.31,36.83,0.59,149.84,74.47,12.1,500,5000,Divam Sharma,Active,92.18
+8,Invesco Discovery Mid Cap Plan - Direct Plan - Growth,Invesco Mutual Fund,Equity,Mid Cap,Discovery,High,5,39.03,34.67,31.66,0.41,653.85,5148.7,23.3,5000,10000,Rohit Singhania,Active,92.14
+9,Baroda BNP Paribas Emerging Small Cap Scheme - Regular Plan - IDCW,Baroda BNP Paribas Mutual Fund,Equity,Small Cap,Emerging,High,4,45.8,39.25,38.75,0.98,119.54,29362.02,20.7,5000,1000,Kalpen Parekh,Growth,90.26
+10,Mirae Asset Micro Cap Small Cap Scheme - Direct Plan - IDCW,Mirae Asset Mutual Fund,Equity,Small Cap,Micro Cap,High,4,47.28,42.02,38.11,0.68,346.87,60.46,3.4,500,1000,Rohit Singhania,Growth,90.08
+11,Aditya Birla Sun Life Discovery Small Cap Plan - Direct Plan - IDCW,Aditya Birla Sun Life Mutual Fund,Equity,Small Cap,Discovery,Very High,4,45.73,43.89,40.53,0.53,628.35,330.11,2.9,1000,10000,Prashant Jain,Value,89.62
+12,IDFC Consumption Sectoral Scheme - Direct Plan - IDCW,IDFC Mutual Fund,Equity,Sectoral,Consumption,High,5,31.2,35.21,21.7,0.5,697.57,2446.04,22.6,500,25000,Manish Gunwani,Passive,87.89
+13,JM Financial MNC Thematic Plan - Regular Plan - IDCW,JM Financial Mutual Fund,Equity,Thematic,MNC,High,5,39.5,31.9,33.4,0.76,546.74,745.41,26.1,500,1000,Chirag Setalvad,GARP,85.85
+14,SBI Discovery Mid Cap Scheme - Regular Plan - IDCW,SBI Mutual Fund,Equity,Mid Cap,Discovery,Moderately High,5,31.59,34.65,30.95,0.72,473.46,604.45,19.4,2000,5000,Nimesh Chandan,Value,85.72
+15,Kotak Mahindra IT Sectoral Scheme - Regular Plan - IDCW,Kotak Mahindra Mutual Fund,Equity,Sectoral,IT,High,5,28.22,33.89,33.95,0.62,64.36,13954.88,26.4,100,5000,Sankaran Naren,Value,85.42
+16,Quant Discovery Mid Cap Scheme - Regular Plan - Growth,Quant Mutual Fund,Equity,Mid Cap,Discovery,Moderately High,4,31.25,34.76,39.52,0.69,293.99,714.57,22.7,1000,5000,Harsha Upadhyaya,Passive,85.02
+17,Edelweiss Micro Cap Small Cap Fund - Direct Plan - Growth,Edelweiss Mutual Fund,Equity,Small Cap,Micro Cap,High,4,46.57,40.22,43.94,1.37,530.52,968.85,17.1,500,10000,Ashish Kela,Growth,84.68
+18,Axis Discovery Small Cap Plan - Regular Plan - Growth,Axis Mutual Fund,Equity,Small Cap,Discovery,High,5,44.28,44.52,41.31,2.01,372.6,257.4,21.4,2000,10000,Ajay Tyagi,GARP,84.67
+19,Mahindra Manulife IT Sectoral Fund - Direct Plan - IDCW,Mahindra Manulife Mutual Fund,Equity,Sectoral,IT,High,4,38.39,33.08,33.15,0.51,235.33,1460.67,19.1,2000,500,Kalpen Parekh,Growth,84.62
+20,Bank of India Discovery Small Cap Scheme - Direct Plan - IDCW,Bank of India Mutual Fund,Equity,Small Cap,Discovery,Very High,5,44.13,38.88,37.71,1.5,578.89,410.69,29.2,1000,1000,Chandraprakash Padiyar,Index,84.17
+21,ICICI Prudential Opportunities Mid Cap Scheme - Regular Plan - Growth,ICICI Prudential Mutual Fund,Equity,Mid Cap,Opportunities,Moderately High,4,36.73,34.04,38.37,0.82,492.28,3352.66,20.5,2500,10000,Niket Shah,Active,84.12
+22,Invesco Micro Cap Small Cap Fund - Regular Plan - IDCW,Invesco Mutual Fund,Equity,Small Cap,Micro Cap,Very High,5,38.3,42.29,44.63,0.98,259.69,1907.56,9.6,500,5000,Chandraprakash Padiyar,Growth,84.11
+23,Nippon India Opportunities Mid Cap Scheme - Regular Plan - Growth,Nippon India Mutual Fund,Equity,Mid Cap,Opportunities,Moderately High,5,34.6,31.0,34.95,0.59,792.26,245.31,17.6,5000,5000,Nimesh Chandan,GARP,83.77
+24,JM Financial Opportunities Mid Cap Fund - Regular Plan - Growth,JM Financial Mutual Fund,Equity,Mid Cap,Opportunities,Moderately High,5,25.71,33.41,32.79,0.43,391.01,366.18,15.3,2500,1000,Sankaran Naren,Index,83.73
+25,Canara Robeco Discovery Small Cap Scheme - Direct Plan - Growth,Canara Robeco Mutual Fund,Equity,Small Cap,Discovery,High,4,45.7,42.61,28.48,1.12,42.23,878.02,0.8,1000,5000,Sailesh Raj Bhan,Passive,83.53
+26,Sundaram Discovery Small Cap Scheme - Regular Plan - Growth,Sundaram Mutual Fund,Equity,Small Cap,Discovery,Very High,4,35.82,41.68,43.4,0.51,740.32,58.71,3.8,1000,1000,Shreyash Devalkar,Growth,83.44
+27,SBI Banking Sectoral Scheme - Regular Plan - Growth,SBI Mutual Fund,Equity,Sectoral,Banking,High,5,41.84,38.13,39.12,0.81,131.55,11717.27,1.1,500,1000,Amit Ganatra,Value,83.43
+28,Quantum Emerging Small Cap Fund - Regular Plan - IDCW,Quantum Mutual Fund,Equity,Small Cap,Emerging,High,4,40.48,36.68,40.7,0.9,369.39,543.55,15.9,2000,10000,Anish Tawakley,GARP,83.41
+29,Sundaram Micro Cap Small Cap Scheme - Regular Plan - Growth,Sundaram Mutual Fund,Equity,Small Cap,Micro Cap,Very High,4,38.24,44.02,42.43,1.04,67.15,3229.3,10.5,500,5000,Shreyash Devalkar,GARP,83.3
+30,Bank of India Micro Cap Small Cap Plan - Regular Plan - IDCW,Bank of India Mutual Fund,Equity,Small Cap,Micro Cap,High,5,39.51,40.34,40.44,1.57,741.7,1066.29,20.8,500,5000,Manish Gunwani,GARP,83.15

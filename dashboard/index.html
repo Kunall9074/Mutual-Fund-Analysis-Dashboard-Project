@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive Mutual Fund Analysis Dashboard - Analyze 2500+ Indian mutual fund schemes, identify top 30 low-risk high-return funds with dynamic charts and filters.">
+    <title>Mutual Fund Insights Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+    <!-- ═══ HEADER ═══ -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <rect width="32" height="32" rx="8" fill="url(#grad1)"/>
+                        <path d="M8 22L12 14L17 18L24 8" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="24" cy="8" r="2.5" fill="white"/>
+                        <defs><linearGradient id="grad1" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#6366F1"/><stop offset="1" stop-color="#06B6D4"/></linearGradient></defs>
+                    </svg>
+                </div>
+                <div>
+                    <h1>Mutual Fund Insights</h1>
+                    <p class="subtitle">Top 30 Low-Risk, High-Return Schemes &mdash; Data-Driven Analysis</p>
+                </div>
+            </div>
+            <div class="header-stats">
+                <div class="header-badge" id="headerBadge">Loading...</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ═══ FILTERS ═══ -->
+    <section class="filter-bar" id="filterBar">
+        <div class="filter-bar-inner">
+            <div class="filter-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+                Filters
+            </div>
+            <div class="filters-grid">
+                <div class="filter-group">
+                    <label for="filterFundType">Fund Type</label>
+                    <select id="filterFundType"><option value="">All Types</option></select>
+                </div>
+                <div class="filter-group">
+                    <label for="filterCategory">Category</label>
+                    <select id="filterCategory"><option value="">All Categories</option></select>
+                </div>
+                <div class="filter-group">
+                    <label for="filterRisk">Risk Level</label>
+                    <select id="filterRisk"><option value="">All Risk Levels</option></select>
+                </div>
+                <div class="filter-group">
+                    <label for="filterAMC">AMC Name</label>
+                    <select id="filterAMC"><option value="">All AMCs</option></select>
+                </div>
+                <div class="filter-group">
+                    <label for="filterRating">Fund Rating</label>
+                    <select id="filterRating"><option value="">All Ratings</option></select>
+                </div>
+                <div class="filter-group filter-action">
+                    <button class="btn-reset" id="btnReset" title="Reset all filters">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+                        Reset
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ KPI CARDS ═══ -->
+    <section class="kpi-section">
+        <div class="kpi-grid">
+            <div class="kpi-card kpi-gradient-1">
+                <div class="kpi-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>
+                </div>
+                <div class="kpi-value" id="kpiTotalFunds">--</div>
+                <div class="kpi-label">Total Funds</div>
+            </div>
+            <div class="kpi-card kpi-gradient-2">
+                <div class="kpi-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+                <div class="kpi-value" id="kpiTotalAUM">--</div>
+                <div class="kpi-label">Total AUM (₹ Cr)</div>
+            </div>
+            <div class="kpi-card kpi-gradient-3">
+                <div class="kpi-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                </div>
+                <div class="kpi-value" id="kpiAvgReturn">--</div>
+                <div class="kpi-label">Avg 3Y Return (%)</div>
+            </div>
+            <div class="kpi-card kpi-gradient-4">
+                <div class="kpi-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div class="kpi-value" id="kpiExpenseRatio">--</div>
+                <div class="kpi-label">Avg Expense Ratio (%)</div>
+            </div>
+            <div class="kpi-card kpi-gradient-5">
+                <div class="kpi-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/></svg>
+                </div>
+                <div class="kpi-value" id="kpiAvgSIP">--</div>
+                <div class="kpi-label">Avg Min SIP (₹)</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CHARTS ═══ -->
+    <section class="charts-section">
+        <div class="charts-grid">
+            <!-- Returns by Category – Donut -->
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h3>3-Year Returns by Category</h3>
+                    <span class="chart-badge">Donut</span>
+                </div>
+                <div class="chart-container chart-donut-container">
+                    <canvas id="chartReturnsCategory"></canvas>
+                </div>
+            </div>
+
+            <!-- Top AMCs – Bar -->
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h3>Top AMCs by Avg Return</h3>
+                    <span class="chart-badge">Bar</span>
+                </div>
+                <div class="chart-container">
+                    <canvas id="chartTopAMCs"></canvas>
+                </div>
+            </div>
+
+            <!-- AUM by Fund Type – Doughnut -->
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h3>Total AUM by Fund Type</h3>
+                    <span class="chart-badge">Doughnut</span>
+                </div>
+                <div class="chart-container chart-donut-container">
+                    <canvas id="chartAUMType"></canvas>
+                </div>
+            </div>
+
+            <!-- Expense Ratio by Strategy – Bar -->
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h3>Expense Ratio by Strategy</h3>
+                    <span class="chart-badge">Bar</span>
+                </div>
+                <div class="chart-container">
+                    <canvas id="chartExpenseStrategy"></canvas>
+                </div>
+            </div>
+
+            <!-- Fund Manager AUM – Horizontal Bar -->
+            <div class="chart-card chart-wide">
+                <div class="chart-header">
+                    <h3>Fund Manager AUM Comparison</h3>
+                    <span class="chart-badge">Horizontal Bar</span>
+                </div>
+                <div class="chart-container chart-wide-container">
+                    <canvas id="chartFundManagers"></canvas>
+                </div>
+            </div>
+
+            <!-- Risk Distribution – Polar Area -->
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h3>Risk Level Distribution</h3>
+                    <span class="chart-badge">Polar</span>
+                </div>
+                <div class="chart-container chart-donut-container">
+                    <canvas id="chartRiskDist"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ INSIGHT CARDS ═══ -->
+    <section class="insights-section">
+        <h2 class="section-title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+            Key Insights
+        </h2>
+        <div class="insights-grid" id="insightsGrid">
+            <!-- Populated by JS -->
+        </div>
+    </section>
+
+    <!-- ═══ TOP 30 TABLE ═══ -->
+    <section class="table-section">
+        <h2 class="section-title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+            Top 30 Mutual Funds
+        </h2>
+        <div class="table-wrapper">
+            <table class="data-table" id="top30Table">
+                <thead>
+                    <tr>
+                        <th data-sort="Rank">#</th>
+                        <th data-sort="Scheme Name">Scheme Name</th>
+                        <th data-sort="AMC Name">AMC</th>
+                        <th data-sort="Fund Type">Type</th>
+                        <th data-sort="Category">Category</th>
+                        <th data-sort="Risk Level">Risk</th>
+                        <th data-sort="Fund Rating">Rating</th>
+                        <th data-sort="Return 3Y (%)">3Y Return %</th>
+                        <th data-sort="Expense Ratio (%)">Expense %</th>
+                        <th data-sort="AUM (Cr)">AUM (Cr)</th>
+                        <th data-sort="Score">Score</th>
+                    </tr>
+                </thead>
+                <tbody id="top30Body">
+                    <!-- Populated by JS -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer">
+        <p>Mutual Fund Insights Dashboard &mdash; Data-Driven Analysis of 2500+ Indian Mutual Fund Schemes</p>
+        <p class="footer-sub">Built with Python (Pandas, Sklearn) &bull; Visualized with Chart.js</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
